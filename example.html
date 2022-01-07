@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>杭跑联盟2022年会</title>
+	<script src="http://www.htmleaf.com/js/jquery/1.9.1/jquery.min.js"></script>
+	<style>
+		div {
+			text-align: center;
+			font-weight: bolder;
+		}
+		div#title {
+			margin-top: 10px;
+			font-size: 36px;
+			color:red;
+		}
+		div#word {
+			margin-top: 50px;
+			font-size: 20px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<script>
+$(function() {
+	count = Math.random();
+	wordsArray = [
+	              "阿仲", "老狼", "可乐", "小欢欢", "表哥", "张显", "大脸猫", "西十一", "小凡","水手", "A+", 
+	              "三火妈", "皮卡丘", "回忆","小宇宙", "明天", "和大爷", "莉莉", "追鱼","金海", "朱琦", "陈慧", 
+	              "土豆", "格格", "罗马", "风语", "老田", "瓜瓜", "阿尔法","卡卡西", "小包", "小田"
+	             ];
+
+	setInterval(function () {
+		$("#word").fadeOut(100, function () {
+			num = parseInt(count * wordsArray.length);
+			$(this).text(wordsArray[num]).fadeIn(100);
+			count = Math.random();
+		});
+	}, 10);
+});
+</script>
+<div>
+	<div id="title">杭跑联盟抽奖专用</div>
+	<div id="word"></div>
+</div>
+	
+</body>
+</html>
